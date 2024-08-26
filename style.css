@@ -1,1 +1,189 @@
+/*** Fonts */
+
+@font-face {
+  font-family: "PlusJakartaSans Medium";
+  src: url(./assets/fonts/static/PlusJakartaSans-Medium.ttf);
+}
+
+@font-face {
+  font-family: "PlusJakartaSans Extra Bold";
+  src: url(./assets/fonts/static/PlusJakartaSans-ExtraBold.ttf);
+}
+
+/*** Colors  */
+:root {
+  --primary1: hsl(1, 90%, 64%); /*Red*/
+  --primary2: hsl(219, 85%, 26%); /*Blue*/
+  --neutral1: hsl(0, 0%, 100%); /*White*/
+  --neutral2: hsl(210, 60%, 98%); /*Very light grayish blue*/
+  --neutral3: hsl(211, 68%, 94%); /*Light grayish blue 1*/
+  --neutral4: hsl(205, 33%, 90%); /* Light grayish blue 2*/
+  --neutral5: hsl(219, 14%, 63%); /* Grayish blue */
+  --neutral6: hsl(219, 12%, 42%); /* Dark grayish blue */
+  --neutral7: hsl(224, 21%, 14%); /* Very dark blue */
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--neutral2);
+}
+
+.container {
+  max-width: 50%;
+  margin-top: 2rem;
+  background:var(--neutral1);
+  border-radius: 10px;
+  padding: 1rem;
+}
+.notifications{
+  padding: 0.56rem;
+}
+/*** Notifications */
+.notifications-num {
+  padding: 1rem;
+  color: var(--neutral7);
+  font-family: 'PlusJakartaSans Extra Bold';
+}
+.num {
+  width: 25px;
+  height: 24px;
+  background:var(--primary2);
+  display: inline-block;
+  color: var(--neutral1);
+  text-align: center;
+  border-radius: 5px;
+}
+
+.read-all {
+  padding: 1rem;
+  color: var(--neutral6);
+  font-family: 'PlusJakartaSans Medium';
+}
+.read-all:hover{
+    cursor: pointer;
+    color: var(--primary2);
+}
+/*** Notification bars */
+
+/***** Bars */
+.bar{
+  padding: 0.56rem;
+}
+.avatar img {
+    width: 55px;
+    margin-top: 0.5rem;
+}
+.details{
+    padding: 1rem;
+}
+#notify1,#notify2,#notify3{
+   background-color: var(--neutral3);
+    border-radius: 5px;
+}
+.details{
+    font-family: 'PlusJakartaSans Medium';
+    color: var(--neutral6);
+}
+.name{
+    font-family: 'PlusJakartaSans Extra Bold';
+    color: var(--neutral7);
+}
+
+.title{
+    font-family:'PlusJakartaSans Extra Bold';
+}
+.title:hover,.name:hover{
+    color: var(--primary2);
+    cursor: pointer;
+}
+.time{
+    color: var(--neutral5);
+    margin-top: -0.5rem;
+}
+.group{
+    color: var(--primary2);
+    cursor: pointer;
+    font-family: 'PlusJakartaSans Extra Bold';
+}
+.unread{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: var(--primary1);
+    border-radius: 50%;
+}
+blockquote{
+  color: var(--neutral5);
+  border-radius: 5px;
+  font-family:'PlusJakartaSans Medium';
+  padding: 1rem;
+}
+blockquote:hover{
+  background: var(--neutral4);
+  cursor: pointer;
+}
+.pic{
+  display: inline-block;
+}
+.pic img{
+  width: 40px;
+}
+/*??? Media Queries *********/
+
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 70%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 80%;
+  
+  }
+}
+@media screen and (max-width: 992px) {
+  .container {
+    max-width: 85%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    min-width: 90%;
+   /*  height: 72vh; */
+  }
+}
+@media screen and (max-width: 600px) {
+  .container {
+    min-width: 97%;
+  }
+  
+  .num {
+    width: 24px;
+    height: 23px;
+    
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .avatar img{
+    width: 65px;
+  }
+  .details{
+    font-size: 1.3em;
+  }
+  
+}
+
 
